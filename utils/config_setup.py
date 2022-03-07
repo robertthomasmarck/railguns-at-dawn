@@ -13,6 +13,13 @@ def master_config():
         return data
 
 
+def config():
+    current_path = os.path.join(os.path.dirname(__file__), "../config/")
+    with open("/Users/rmarck/PycharmProjects/railguns-at-dawn/config/config.toml") as config_file:
+        data = toml.load(config_file)
+    return data
+
+
 class MasterConfig(BaseModel):
     browser: str
 
