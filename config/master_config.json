@@ -1,3 +1,6 @@
 {
-   "browser": "chrome"
+   "browser": "chrome",
+   "options": [],
+   "version": "latest",
+   "driver_exe_path": "manager"
 }

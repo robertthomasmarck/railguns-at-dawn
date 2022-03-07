@@ -1,5 +1,5 @@
-from telnetlib import EC
-
+from selenium.webdriver import Keys, ActionChains
+from selenium.webdriver.support import expected_conditions as EC
 from selenium.common.exceptions import TimeoutException
 from selenium.webdriver.support.wait import WebDriverWait
 
@@ -34,3 +34,6 @@ class BasePage:
 
     def click_web_element(self, by_locator):
         self.get_web_element(by_locator).click()
+
+    def press_return(self):
+        ActionChains(self.driver).key_down(Keys.RETURN).key_up(Keys.RETURN).perform()
